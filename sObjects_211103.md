@@ -6,11 +6,12 @@
 
 As Apex is integrated with the DB, it can access to the Saleforce registries and his fields.
 Ex: 
-|Campo de cuenta | Valor|
-|:---------------|-----:|
-|Id (id.)|001D000000JlfXe|
-|Nombre|Acme|
-|Telefono|(415)555-1212|
+
+|  Campo de cuenta | Valor  |
+|---|---|
+| Id (id.)  |  001D000000JlfXe |
+| Nombre  | Acme  |
+| Telefono  | (415)555-1212  |
 
 ### Creation variables sObjects
 ```Apex
