@@ -82,16 +82,14 @@ upsert contacts;
 ```
 
 #### Deleting Records
-
-´´´Java
+´´´Apex
 Contact[] contactsDel = [SELECT Id FROM Contact WHERE LastName='Smith']; 
 delete contactsDel;
 ´´´
 
 #### DML statment Exception
 If DML Operation fails, it returns an exception of type ***DmlException***.
-
-´´´Java
+´´´Apex
 try {
     // This causes an exception because 
     //   the required Name field is not provided.
@@ -111,4 +109,3 @@ try {
 4. Database.delete()
 5. Database.undelete()
 6. Database.merge()
-
