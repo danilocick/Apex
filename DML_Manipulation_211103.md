@@ -81,3 +81,32 @@ upsert contacts;
 // Result: Josh is updated and Kathy is created.
 ```
 
+#### Deleting Records
+´´´Java
+Contact[] contactsDel = [SELECT Id FROM Contact WHERE LastName='Smith']; 
+delete contactsDel;
+´´´
+
+#### DML statment Exception
+If DML Operation fails, it returns an exception of type ***DmlException***.
+´´´Java
+try {
+    // This causes an exception because 
+    //   the required Name field is not provided.
+    Account acct = new Account();
+    // Insert the account 
+    insert acct;
+} catch (DmlException e) {
+    System.debug('A DML exception has occurred: ' +
+                e.getMessage());
+}
+´´´
+
+### Database Methods
+1. Database.insert()
+2. Database.update()
+3. Database.upsert()
+4. Database.delete()
+5. Database.undelete()
+6. Database.merge()
+
