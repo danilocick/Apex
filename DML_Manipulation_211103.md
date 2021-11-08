@@ -82,14 +82,14 @@ upsert contacts;
 ```
 
 #### Deleting Records
-´´´Apex
+```Java
 Contact[] contactsDel = [SELECT Id FROM Contact WHERE LastName='Smith']; 
 delete contactsDel;
-´´´
+```
 
 #### DML statment Exception
 If DML Operation fails, it returns an exception of type ***DmlException***.
-´´´Apex
+```Java
 try {
     // This causes an exception because 
     //   the required Name field is not provided.
@@ -100,7 +100,7 @@ try {
     System.debug('A DML exception has occurred: ' +
                 e.getMessage());
 }
-´´´
+```
 
 ### Database Methods
 1. Database.insert()
@@ -112,11 +112,11 @@ try {
 
 Unlike DML statements, Database methods have an optional allOrNone parameter that allows you to specify whether the operation should partially succeed. When this parameter is set to false, if errors occur on a partial set of records, the successful records will be committed and errors will be returned for the failed records. Also, no exceptions are thrown with the partial success option.
 
-´´´Apex
+```Java
 Database.insert(recordList, false);
-´´´
+```
 
 The Database methods return result objects containing success or failure information for each record. For example, insert and update operations each return an array of ***Database.SaveResult*** objects
-´´´Apex
+```Java
 Database.SaveResult[] results = Database.insert(recordList, false);
-´´´
+```
