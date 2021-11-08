@@ -109,3 +109,14 @@ try {
 4. Database.delete()
 5. Database.undelete()
 6. Database.merge()
+
+Unlike DML statements, Database methods have an optional allOrNone parameter that allows you to specify whether the operation should partially succeed. When this parameter is set to false, if errors occur on a partial set of records, the successful records will be committed and errors will be returned for the failed records. Also, no exceptions are thrown with the partial success option.
+
+´´´Apex
+Database.insert(recordList, false);
+´´´
+
+The Database methods return result objects containing success or failure information for each record. For example, insert and update operations each return an array of ***Database.SaveResult*** objects
+´´´Apex
+Database.SaveResult[] results = Database.insert(recordList, false);
+´´´
