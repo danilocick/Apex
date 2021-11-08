@@ -82,6 +82,7 @@ upsert contacts;
 ```
 
 #### Deleting Records
+
 ´´´Java
 Contact[] contactsDel = [SELECT Id FROM Contact WHERE LastName='Smith']; 
 delete contactsDel;
@@ -89,6 +90,7 @@ delete contactsDel;
 
 #### DML statment Exception
 If DML Operation fails, it returns an exception of type ***DmlException***.
+
 ´´´Java
 try {
     // This causes an exception because 
