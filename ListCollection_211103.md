@@ -3,17 +3,17 @@
 <br>
 
 This a list of Strings.
-```Apex
+```Java
     List<String> colors = new List<String>();
 ```
 
 Alternatively you can use an array of string to do the same.
-```Apex
+```Java
     String[] colors = new List<String>();
 ```
 
 To add elements to the list you just need:
-```Apex
+```Java
     // Create a list and add elements to it in one step
     List<String> colors = new List<String> { 'red', 'green', blue'};
     // Add elements to a list after it has been created
@@ -23,7 +23,7 @@ To add elements to the list you just need:
 ```
 
 This elements can be readed with ***get()***, and to print all we need a bucle.
-```Apex
+```Java
     // Get elements from a list
     String color1 = moreColors.get(0);
     String color2 = moreColors[0];
@@ -34,12 +34,4 @@ This elements can be readed with ***get()***, and to print all we need a bucle.
         // Write value to the debug log
         System.debug(colors[i]);
     }
-```
-
-
-
-
-
-
-```Apex
 ```

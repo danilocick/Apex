@@ -14,7 +14,7 @@ Ex:
 | Telefono  | (415)555-1212  |
 
 ### Creation variables sObjects
-```Apex
+```Java
 Account acct = new Account(Name='Acme');
 Account acct = new Account(Name='Acme', Phone='(415)555-1212', NumberOfEmployees=100);
 ```
@@ -23,7 +23,7 @@ Account acct = new Account(Name='Acme', Phone='(415)555-1212', NumberOfEmployees
 To get a generic object you can use the field itself but if you want to access to a personalized object you have to use __c. 
 For example
 
-```Apex
+```Java
 Account acct = new Account(Name='Acme');
 Account acct = new Book__c(Name='BookPersonalized');
 ```

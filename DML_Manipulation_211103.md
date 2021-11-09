@@ -6,7 +6,7 @@
 To create and modify registries in Salesforce by using the Data Manipulation Language, abbreviated as DML. DML provides a 
 straightforward way to manage records by providing simple statements to insert, update, merge, delete, and restore records. 
 
-```Apex
+```Java
 // Create the account sObject 
 Account acct = new Account(Name='Acme', Phone='(415)555-1212', NumberOfEmployees=100);
 // Insert the account by using DML
@@ -22,7 +22,7 @@ There are DML statements available:
 
 When you insert a record, the system assigns an ID to each record.
 Let's get this new value and set it into debug:
-```Apex
+```Java
 // Create the account sObject 
 Account acct = new Account(Name='Acme', Phone='(415)555-1212', NumberOfEmployees=100);
 // Insert the account by using DML
@@ -37,7 +37,7 @@ System.debug('ID = ' + acctID);
 
 Also you can bulk a list of sObjects 
 
-```Apex
+```Java
 // Create a list of contacts
 List<Contact> conList = new List<Contact> {
     new Contact(FirstName='Joe',LastName='Smith',Department='Finance'),
@@ -64,7 +64,7 @@ update listToUpdate;
 
 #### Upserting Records
 If you have a mix list with new and existing records, yo ucan process isertions and updates to all records using ***upsert***.
-```Apex
+```Java
 // Insert the Josh contact
 Contact josh = new Contact(FirstName='Josh',LastName='Kaplan',Department='Finance');       
 insert josh;
